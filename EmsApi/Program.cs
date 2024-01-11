@@ -31,6 +31,8 @@ builder.Services.AddScoped<IStudentRepository, StudentRepository>();
 builder.Services.AddScoped<IStudentLogic, StudentLogic>();
 builder.Services.AddScoped<IOtherDepartmentRepository, OtherDepartmentRepository>();
 builder.Services.AddScoped<IOtherDepartmentLogic, OtherDepartmentLogic>();
+builder.Services.AddScoped<IOtherEmployeeRepository, OtherEmployeeRepository>();
+builder.Services.AddScoped<IOtherEmployeeLogic, OtherEmployeeLogic>();
 
 var app = builder.Build();
 
