@@ -1,0 +1,27 @@
+﻿using System;
+using System.Collections.Generic;
+
+namespace EmsApi.Models;
+
+public partial class Student
+{
+    public int Id { get; set; }
+
+    public string? Name { get; set; }
+
+    public string? Mobile { get; set; }
+
+    public string? Email { get; set; }
+
+    public string? Adddress { get; set; }
+
+    public int? JoiningYear { get; set; }
+
+    public int? ProgramId { get; set; }
+
+    public int? CourseId { get; set; }
+
+    public virtual Course? Course { get; set; }
+
+    public virtual Program? Program { get; set; }
+}
