@@ -21,6 +21,8 @@ options.UseSqlServer(builder.Configuration.GetConnectionString("EmsDbConnectionS
 //Injecting Repository Pattern and Business Logic Pattern
 builder.Services.AddScoped<IProgramRepository, ProgramRepository>();
 builder.Services.AddScoped<IProgramLogic, ProgramLogic>();
+builder.Services.AddScoped<ICourseRepository, CourseRepository>();
+builder.Services.AddScoped<ICourseLogic, CourseLogic>();
 
 var app = builder.Build();
 
