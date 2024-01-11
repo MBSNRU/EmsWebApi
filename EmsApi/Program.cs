@@ -1,4 +1,8 @@
+using EmsApi.ILogic;
+using EmsApi.IRepository;
+using EmsApi.Logic;
 using EmsApi.Models;
+using EmsApi.Repository;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -13,6 +17,10 @@ builder.Services.AddSwaggerGen();
 //Injecting DbContext
 builder.Services.AddDbContext<EmsContext>(options=>
 options.UseSqlServer(builder.Configuration.GetConnectionString("EmsDbConnectionString")));
+
+//Injecting Repository Pattern and Business Logic Pattern
+builder.Services.AddScoped<IProgramRepository, ProgramRepository>();
+builder.Services.AddScoped<IProgramLogic, ProgramLogic>();
 
 var app = builder.Build();
 
