@@ -29,6 +29,8 @@ builder.Services.AddScoped<IInstructorRepository, InstructorRepository>();
 builder.Services.AddScoped<IInstructorLogic, InstructorLogic>();
 builder.Services.AddScoped<IStudentRepository, StudentRepository>();
 builder.Services.AddScoped<IStudentLogic, StudentLogic>();
+builder.Services.AddScoped<IOtherDepartmentRepository, OtherDepartmentRepository>();
+builder.Services.AddScoped<IOtherDepartmentLogic, OtherDepartmentLogic>();
 
 var app = builder.Build();
 
